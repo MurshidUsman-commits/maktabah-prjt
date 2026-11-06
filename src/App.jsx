@@ -1,12 +1,13 @@
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
+import BannerContent from "./bannerContent";
 
 function App() {
-
   return (
     <>
-     <Navbar/>
+      <Navbar />
+      <BannerContent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
