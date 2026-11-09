@@ -21,7 +21,7 @@ function Navbar() {
   );
 
   const mobileNavBar = (
-    <div className={`mobile-navbar navbar`}>
+    <div className={`mobile-navbar navbar1`}>
       <button
         type="button"
         className="menu-toggle"
@@ -41,7 +41,7 @@ function Navbar() {
   );
 
   const desktopNavbar = (
-    <div className={`desktop-navbar navbar`}>
+    <div className={`desktop-navbar navbar2`}>
       {logo}
 
       <ul className="nav-links">

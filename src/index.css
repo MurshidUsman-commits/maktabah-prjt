@@ -7,7 +7,18 @@ body {
 }
 
 
-.navbar {
+.navbar1 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.7rem 2rem;
+  background-color: whitesmoke;
+  position: sticky;
+  top: 0;
+}
+
+.navbar2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
