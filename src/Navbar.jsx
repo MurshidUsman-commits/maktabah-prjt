@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./navbar.css";
 
 const navLinks = [
   { label: "PERSONALITIES", path: "/personalities" },
@@ -12,8 +13,9 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const logo = (
-    <a href="/" className="navbar-logo">
+    <a href="/">
       <img
+        className="navbar-logo-img"
         src="src\assets\maktaba-logo-light.png"
         alt="Maktabah As Sunnah Wa As Salafiyyah"
       />
@@ -21,7 +23,7 @@ function Navbar() {
   );
 
   const mobileNavBar = (
-    <div className={`mobile-navbar navbar1`}>
+    <div className={`mobile-navbar navbar`}>
       <button
         type="button"
         className="menu-toggle"
@@ -41,7 +43,7 @@ function Navbar() {
   );
 
   const desktopNavbar = (
-    <div className={`desktop-navbar navbar2`}>
+    <div className={`desktop-navbar navbar`}>
       {logo}
 
       <ul className="nav-links">

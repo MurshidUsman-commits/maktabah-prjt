@@ -1,0 +1,114 @@
+.navbar {
+  padding: 1rem 2rem;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+.desktop-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* use variable for primary and secondary color */
+  background-color: whitesmoke;
+}
+
+.navbar-logo-img {
+  width: 8.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  /* use divs instead */
+  list-style: none;
+}
+
+.nav-links a {
+  color: #696767;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.nav-links a:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle,
+.nav-links a:hover {
+  color: #434343;
+}
+
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+  }
+
+  .desktop-navbar {
+    display: none;
+  }
+
+  .menu-toggle {
+    grid-area: menu;
+    justify-self: start;
+  }
+
+  .share-button {
+    display: flex;
+    grid-area: share;
+    justify-self: end;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .share-button:hover {
+    background-color: #4f4f4f;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    background-color: whitesmoke;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  }
+
+  .navbar.menu-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+  }
+}
