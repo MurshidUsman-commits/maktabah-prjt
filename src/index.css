@@ -5,6 +5,20 @@ body {
 
 :root {
   --primary-clr: whitesmoke;
-  --secondary-clr:  black;
+  --secondary-clr: black;
   --nav-link-clr: #696767;
+}
+
+.site-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--secondary-clr);
+  color: white;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.site-button:hover {
+  background-color: #4f4f4f;
 }

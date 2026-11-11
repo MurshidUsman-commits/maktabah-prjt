@@ -22,34 +22,34 @@ function Navbar() {
     </a>
   );
 
+  const shareButton = (
+    <button type="button" className="site-button">
+      SHARE
+    </button>
+  );
+
   const mobileNavBar = (
-    <div className={`mobile-navbar navbar`}>
-      <button
-        type="button"
-        className="menu-toggle"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <span className="material-symbols-outlined">
-          {menuOpen ? "close" : "menu"}
-        </span>
-      </button>
+    <div className="mobile-nav-wrapper">
+      <div className={`mobile-navbar navbar`}>
+        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="material-symbols-outlined">
+            {menuOpen ? "close" : "menu"}
+          </span>
+        </button>
 
-      {logo}
+        {logo}
 
-      <button type="button" className="share-button">
-        SHARE
-      </button>
-
-    {menuOpen && (
-      <div className="mobile-nav-links">
-        {navLinks.map(({ label, path }) => (
-          <div key={path}>
-            <a href={path}>{label}</a>
-          </div>
-        ))}
+        {shareButton}
       </div>
-    )}
-
+      {menuOpen && (
+        <div className="mobile-nav-links">
+          {navLinks.map(({ label, path }) => (
+            <div key={path}>
+              <a href={path}>{label}</a>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 
@@ -65,15 +65,7 @@ function Navbar() {
         ))}
       </div>
 
-      <button
-        type="button"
-        className="menu-toggle"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <span className="material-symbols-outlined">
-          {menuOpen ? "close" : "menu"}
-        </span>
-      </button>
+      {shareButton}
     </div>
   );
 

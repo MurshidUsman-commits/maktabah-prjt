@@ -5,13 +5,8 @@
   background-color: var(--primary-clr);
 }
 
-.mobile-navbar {
-  display: none;
-}
-
 .desktop-navbar {
   display: flex;
-  /* use variable for primary and secondary color */
 }
 
 .navbar-logo-img {
@@ -23,11 +18,10 @@
   align-items: center;
   justify-content: center;
   column-gap: 2rem;
-  /* use divs instead */
-  /* list-style: none; */
 }
 
-.nav-links a,.mobile-nav-links a {
+.nav-links a,
+.mobile-nav-links a {
   color: var(--nav-link-clr);
   text-decoration: none;
   font-size: 0.9rem;
@@ -35,22 +29,45 @@
   border-radius: 0.25rem;
 }
 
-.nav-links a:hover,.mobile-nav-links a:hover {
+.nav-links a:hover,
+.mobile-nav-links a:hover {
   background-color: rgb(230, 230, 230);
 }
 
 .menu-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.menu-toggle,
+.menu-toggle {
+  color: #434343;
+}
+
 .nav-links a:hover {
   color: #434343;
+}
+
+.mobile-nav-wrapper {
+  position: relative;
+  height: 5rem;
+}
+
+.mobile-navbar {
+  display: none;
+  height: 100%;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5rem;
+  background-color: var(--primary-clr);
+  padding: 1rem;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -60,32 +77,5 @@
 
   .desktop-navbar {
     display: none;
-  }
-
-  .share-button {
-    display: flex;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: var(--secondary-clr);
-    color: white;
-    font-size: 0.75rem;
-    cursor: pointer;
-  }
-
-  .share-button:hover {
-    background-color: #4f4f4f;
-  }
-
-  .mobile-nav-links {
-    display: flex;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 5rem;
-    flex-direction: column;
-    background-color: var(--primary-clr);
-    padding: 1rem;
-    gap: 1rem;
   }
 }
