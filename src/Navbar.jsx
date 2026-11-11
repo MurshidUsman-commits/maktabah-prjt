@@ -39,6 +39,17 @@ function Navbar() {
       <button type="button" className="share-button">
         SHARE
       </button>
+
+    {menuOpen && (
+      <div className="mobile-nav-links">
+        {navLinks.map(({ label, path }) => (
+          <div key={path}>
+            <a href={path}>{label}</a>
+          </div>
+        ))}
+      </div>
+    )}
+
     </div>
   );
 
@@ -46,13 +57,13 @@ function Navbar() {
     <div className={`desktop-navbar navbar`}>
       {logo}
 
-      <ul className="nav-links">
+      <div className="nav-links">
         {navLinks.map(({ label, path }) => (
-          <li key={path}>
+          <div key={path}>
             <a href={path}>{label}</a>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <button
         type="button"
